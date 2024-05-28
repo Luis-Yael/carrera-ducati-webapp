@@ -1,0 +1,63 @@
+<section>
+  <div class="wrapper">
+    <mat-drawer-container>
+        <mat-drawer #drawer mode='over' position="start">
+            <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
+        </mat-drawer>
+        <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+        <!-- Sección del body donde se muestra todo el contenido -->
+        <div class="body-home">
+          <div class="top-container">
+            <div class="title-container">
+              <h1>¡Hora de correr!</h1>
+            </div>
+            <br>
+            <h3><b>Objetivo</b></h3>
+            <p>Estás a punto de jugar Moto Rider, el juego consiste en conducir una motocicleta a través de un camino con autos, tu misión es esquivarlos durante 120 segundos mientras la velocidad va aumentando.</p>            
+          </div>
+          <div class="mid-container">
+            <h3><b>Puntuacion</b></h3>
+            <div class="score">
+              <p>ACCION</p>
+              <p>PUNTOS</p>
+            </div>
+            <div class="score">
+              <p>Código redimido</p>
+              <p>1000</p>
+            </div>
+            <div class="score">
+              <p>Jugar sin chocar de 0 a 30 segundos</p>
+              <p>100</p>
+            </div>
+            <div class="score">
+              <p>Jugar sin chocar de 30 a 60 segundos</p>
+              <p>200</p>
+              </div>
+            <div class="score">
+              <p>Jugar sin chocar de 61 a 90 segundos</p>
+              <p>300</p>
+            </div>
+            <div class="score">
+              <p>Jugar sin chocar de 91 a 120 segundos</p>
+              <p>400</p>
+            </div>
+          </div>
+          <div class="bottom-container">
+            <h3>Informacion Adicional</h3>
+            <p>Tienes dos oportunidades por cada código que redimimas.<br><br>La 1ra oportunidad es entrenamiento y no genera puntos.<br><br>La 2da oportunidad genera puntos, el juego termina si chocas o se termina el tiempo.<br><br>Verifica que tu conexión a Internet sea estable al momento de jugar.</p>
+          </div>
+          <div class="d-flex flex-direction-row justify-content-center w-100 mt-3 mb-3">
+            <button mat-flat-button color="warn" class="btn-registrar" [disabled]="isLoading" (click)="irJuego()">
+                <span class="text-btn" *ngIf="!isLoading">JUGAR AHORA</span>
+            </button>
+        </div>
+            
+            <!-- Footer -->
+            <div class="footer">
+                <app-footer-app></app-footer-app>
+            </div>
+        </div>
+    </mat-drawer-container>
+    <!-- Se cierra el sidebar -->
+</div>
+</section>

@@ -17,10 +17,10 @@ export class FooterAppComponent implements OnInit{
   }
 
   public terminosCondiciones(){
-    this.router.navigate(["terminos-y-condiciones"]);
+    this.router.navigate(["terminos"]);
   }
 
   public avisoPrivacidad(){
-    this.router.navigate(["aviso-de-privacidad"]);
+    this.router.navigate(["Politica-de-privacidad"]);
   }
 }

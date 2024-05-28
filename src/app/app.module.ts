@@ -21,6 +21,11 @@ import { HeaderAppComponent } from './partials/header-app/header-app.component';
 import { LeftSidebarComponent } from './partials/left-sidebar/left-sidebar.component';
 import { HomeScreenComponent } from './screens/home-screen/home-screen.component';
 import { BasesPromocionScreenComponent } from './screens/bases-promocion-screen/bases-promocion-screen.component';
+import { Instructions } from './screens/instructions/instructions.component';
+import { NuevoLook } from './screens/nuevo-look/nuevo.component';
+import { Juego } from './screens/juego/juego.component';
+import { Politicas } from './screens/politicas/politicas.component';
+import { Terminos } from './screens/terminos/terminos.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,13 @@ import { BasesPromocionScreenComponent } from './screens/bases-promocion-screen/
     HeaderAppComponent,
     LeftSidebarComponent,
     HomeScreenComponent,
-    BasesPromocionScreenComponent
+    BasesPromocionScreenComponent,
+    Instructions,
+    NuevoLook,
+    Juego,
+    Politicas,
+    Terminos,
+    
   ],
   imports: [
     BrowserModule,

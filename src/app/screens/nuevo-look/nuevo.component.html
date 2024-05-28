@@ -1,0 +1,54 @@
+<section>
+  <div class="wrapper">
+    <mat-drawer-container>
+        <mat-drawer #drawer mode='over' position="start">
+            <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
+        </mat-drawer>
+        <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+        <!-- Sección del body donde se muestra todo el contenido -->
+        <div class="body-home">
+
+          <div class="top-container">
+            <div class="title-container">
+              <h1>Nuevo Look</h1>
+            </div>
+            <br>
+            <p>¿Quieres tener una idea de cómo verías si usarás unos increíbles Carrera Ducati?</p>            
+          </div>
+
+          <div class="cards">
+            <div class="card">
+              <img src="assets/images/lentes-ducati-1.png" alt="look1" width="280px">
+              <p>CARDUC 001/S</p>
+            </div>
+            <div class="card">
+              <img src="assets/images/lentes-ducati-2.png" alt="look2" width="280px">
+              <p>CARDUC 002/S</p>
+            </div>
+            <div class="card">
+              <img src="assets/images/lentes-ducati-3.png" alt="look3" width="280px">
+              <p>CARDUC 003/S</p>
+            </div>
+            
+          </div>
+
+
+          
+          <div class="d-flex flex-direction-row justify-content-center w-100 mt-3 mb-3">
+            <button  class="btn-omitir" [disabled]="isLoading">
+              <span class="text-btn" *ngIf="!isLoading">OMITIR</span>
+          </button>
+            <button (click)="irJuego()" mat-flat-button color="warn" class="btn-registrar" [disabled]="isLoading">
+                <span class="text-btn" *ngIf="!isLoading">USAR LENTES</span>
+            </button>
+        </div>
+            
+            <!-- Footer -->
+            <div class="footer">
+                <app-footer-app></app-footer-app>
+            </div>
+        </div>
+    </mat-drawer-container>
+    <!-- Se cierra el sidebar -->
+</div>
+</section>

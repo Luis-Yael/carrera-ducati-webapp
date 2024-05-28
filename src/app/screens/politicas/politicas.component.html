@@ -1,0 +1,29 @@
+<section>
+  <div class="wrapper">
+    <mat-drawer-container>
+        <mat-drawer #drawer mode='over' position="start">
+            <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
+        </mat-drawer>
+        <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+        <!-- Sección del body donde se muestra todo el contenido -->
+        <div class="body-home">
+          <div class="top-container">
+            <div class="title-container">
+              <h1>POLITICA DE PRIVACIDAD</h1>
+            </div>
+              <br>
+              <P>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. <br><br> Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <br><br> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.<br><br> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br><br> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.</P>         
+            </div>
+          
+          
+          
+            
+            <!-- Footer -->
+            <div class="footer">
+                <app-footer-app></app-footer-app>
+            </div>
+        </div>
+    </mat-drawer-container>
+    <!-- Se cierra el sidebar -->
+</div>
+</section>

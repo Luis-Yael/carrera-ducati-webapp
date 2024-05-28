@@ -1,75 +1,125 @@
 <div class="wrapper">
   <div class="header-sidebar">
     <div class="icon-close" (click)="cerrar_drawer()">
-        <img src="/assets/images/cerrar-icon.png" class="img-close">
+      <img src="/assets/images/cerrar-icon.png" class="img-close" />
     </div>
   </div>
   <div class="body-sidebar">
     <div class="links" *ngIf="!isLogin" (click)="iniciarSesion()">
       <div class="line-color">
-          <div class="vertical-line" style="height: 111px;"></div>
+        <div class="vertical-line" style="height: 111px"></div>
       </div>
       <div class="title-link">
-          <span>INICIAR SESIÓN</span>
+        <span>INICIAR SESIÓN</span>
       </div>
       <div class="arrow-icon">
-          <mat-icon class="icon-right">arrow_forward_ios</mat-icon>
+        <mat-icon class="icon-right">arrow_forward_ios</mat-icon>
       </div>
     </div>
 
     <div class="links" *ngIf="isLogin" (click)="goInicio()">
       <div class="line-color">
-          <div class="vertical-line" style="height: 111px;"></div>
+        <div class="vertical-line" style="height: 111px"></div>
       </div>
       <div class="title-link">
-          <span>INICIO</span>
+        <span>INICIO</span>
       </div>
       <div class="arrow-icon">
-          <mat-icon class="icon-right">arrow_forward_ios</mat-icon>
+        <mat-icon class="icon-right">arrow_forward_ios</mat-icon>
       </div>
     </div>
 
     <div class="links" (click)="goBasesPromocion()">
       <div class="line-color">
-          <div class="vertical-line" style="height: 111px;"></div>
+        <div class="vertical-line" style="height: 111px"></div>
       </div>
       <div class="title-link">
-          <span>BASES DE LA PROMOCIÓN</span>
+        <span>BASES DE LA PROMOCIÓN</span>
       </div>
       <div class="arrow-icon">
-          <mat-icon class="icon-right">arrow_forward_ios</mat-icon>
+        <mat-icon class="icon-right">arrow_forward_ios</mat-icon>
+      </div>
+    </div>
+
+    <div class="links" (click)="goInstrucciones()">
+      <div class="line-color">
+        <div class="vertical-line" style="height: 111px"></div>
+      </div>
+      <div class="title-link">
+        <span>INSTRUCCIONES</span>
+      </div>
+      <div class="arrow-icon">
+        <mat-icon class="icon-right">arrow_forward_ios</mat-icon>
+      </div>
+    </div>
+
+    <div class="links" (click)="goNuevoLook()">
+      <div class="line-color">
+        <div class="vertical-line" style="height: 111px"></div>
+      </div>
+      <div class="title-link">
+        <span>NUEVO LOOK</span>
+      </div>
+      <div class="arrow-icon">
+        <mat-icon class="icon-right">arrow_forward_ios</mat-icon>
+      </div>
+    </div>
+
+    <div class="links" (click)="goJuego()">
+      <div class="line-color">
+        <div class="vertical-line" style="height: 111px"></div>
+      </div>
+      <div class="title-link">
+        <span>JUEGO</span>
+      </div>
+      <div class="arrow-icon">
+        <mat-icon class="icon-right">arrow_forward_ios</mat-icon>
+      </div>
+    </div>
+
+    <div class="links" (click)="goPolitica()">
+      <div class="line-color">
+        <div class="vertical-line" style="height: 111px"></div>
+      </div>
+      <div class="title-link">
+        <span>POLITICA DE PRIVACIDAD</span>
+      </div>
+      <div class="arrow-icon">
+        <mat-icon class="icon-right">arrow_forward_ios</mat-icon>
+      </div>
+    </div>
+    <div class="links" (click)="goTerminos()">
+      <div class="line-color">
+        <div class="vertical-line" style="height: 111px"></div>
+      </div>
+      <div class="title-link">
+        <span>TERMINOS Y CONDICIONES</span>
+      </div>
+      <div class="arrow-icon">
+        <mat-icon class="icon-right">arrow_forward_ios</mat-icon>
       </div>
     </div>
 
     <div class="links" (click)="goTiendasParticipantes()">
       <div class="line-color">
-          <div class="vertical-line" style="height: 111px;"></div>
+        <div class="vertical-line" style="height: 111px"></div>
       </div>
       <div class="title-link">
-          <span>TIENDAS PARTICIPANTES</span>
+        <span>TIENDAS PARTICIPANTES</span>
       </div>
       <div class="arrow-icon">
-          <mat-icon class="icon-right">arrow_forward_ios</mat-icon>
-      </div>
-    </div>
-
-    <div class="links" (click)="goPerfil()">
-      <div class="line-color">
-          <div class="vertical-line" style="height: 111px;"></div>
-      </div>
-      <div class="title-link">
-          <span>PERFIL DEL USUARIO</span>
-      </div>
-      <div class="arrow-icon">
-          <mat-icon class="icon-right">arrow_forward_ios</mat-icon>
+        <mat-icon class="icon-right">arrow_forward_ios</mat-icon>
       </div>
     </div>
   </div>
-  <div class="footer-sidebar" (click)="logout()" *ngIf="isLogin">
-    <span class="logout">
-        CERRAR SESIÓN
+  <div class="footer-sidebar" *ngIf="isLogin">
+    <span class="logout" (click)="logout()"> CERRAR SESIÓN
     </span>
-    <mat-icon class="icon-logout">logout</mat-icon>
+    <span class="logout" (click)="goPerfil()"> PERFIL </span>
   </div>
-  <div class="footer-sidebar" *ngIf="!isLogin" style="cursor: auto!important;"></div>
+  <div
+    class="footer-sidebar"
+    *ngIf="!isLogin"
+    style="cursor: auto !important"
+  ></div>
 </div>

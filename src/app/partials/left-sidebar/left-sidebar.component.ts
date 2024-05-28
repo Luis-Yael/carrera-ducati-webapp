@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./left-sidebar.component.scss']
 })
 export class LeftSidebarComponent implements OnInit{
+
   @Output() cerrar = new EventEmitter();
 
   public isLogin: boolean = true;
@@ -35,8 +36,28 @@ export class LeftSidebarComponent implements OnInit{
     this.router.navigate(["bases-promocion"]);
   }
 
-  public goTiendasParticipantes(){
+  public goInstrucciones(){
+    this.router.navigate(["instrucciones"]);
+  }
 
+  public goNuevoLook(){
+    this.router.navigate(["modelos"]);
+  }
+
+  public goJuego(){
+    this.router.navigate(["juego"]);
+  }
+
+  public goPolitica(){
+    this.router.navigate(["Politica-de-privacidad"]);
+  }
+
+  public goTerminos(){
+    this.router.navigate(["terminos"]);
+  }
+
+  public goTiendasParticipantes(){
+    window.location.href = 'https://www.linkedin.com/in/kevingael/';
   }
 
   public goPerfil(){
