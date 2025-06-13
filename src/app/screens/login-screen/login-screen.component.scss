@@ -1,0 +1,250 @@
+/*-------------- Todos los estilos para mobile --------------*/
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  //Scroll vertical
+  overflow-y: scroll!important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-marca{
+  width: 280px;
+  height: 34px;
+}
+
+.content{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.login-img{
+  width: 360px;
+  height: 184px;
+}
+
+.login-body{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-login{
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.title-login{
+  text-align: left;
+  font-family: Avenir-Bold!important;
+  font-size: 20px;
+  letter-spacing: 0px;
+  color: #000000;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.label-pwd{
+  text-align: left;
+  font-family: Avenir-Bold!important;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #CD0000;
+  opacity: 1;
+}
+
+.txt-registro{
+  text-align: center;
+  font-family: Avenir!important;
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: #000000;
+
+}
+.red{
+  font-family: Avenir-Bold!important;
+  letter-spacing: 0px;
+  color: #CD0000;
+  cursor: pointer;
+}
+
+//Footer
+.footer{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.liston-img{
+  width: 56px;
+  height: 28px;
+}
+
+//Estilos mat-inputs
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+.mat-mdc-form-field-appearance-outline .mat-form-field-outline {
+  color: #000000;
+  // background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+.mat-focused .mat-form-field-label {
+  /*change color of label*/
+  text-align: left;
+  font-family: Avenir!important;
+  letter-spacing: 0px;
+  color: #000000 !important;
+  opacity: 1;
+}
+
+hr{
+  border-top: 2px solid #8c8b8b;
+  width: 100%;
+}
+mat-label{
+  text-align: left;
+  font-family: Avenir;
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+  margin: 0 0!important;
+}
+
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: #000000!important;
+}
+
+//Button
+.mdc-button{
+  background: #CD0000 0% 0% no-repeat padding-box;
+  opacity: 1;
+  width: 188px;
+  height: 40px;
+  border-radius: 0;
+  //Fuente
+  .text-btn{
+      text-align: center;
+      font-family: Avenir;
+      font-size: 17px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      opacity: 1;
+  }
+}
+
+/* -------------- Todos los estilos para desktop --------------*/
+.wrapper-desktop{
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden!important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-desktop{
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.body-desktop{
+  width: 100vw;
+  height: 90vh;
+  overflow-y: hidden!important;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.section-left{
+  margin-left: 2rem;
+  width: 60%;
+  height: 90vh;
+  overflow-y: hidden!important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-right{
+  padding-top: 3.5rem;
+  width: 40%;
+  height: 90vh;
+  overflow-y: hidden!important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.form-login-desktop{
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.logo-marca-desktop{
+  width:50%;
+  height: 100%;
+}
+
+.login-img-desktop{
+  width: 100%;
+  height: 100%;
+}
+//Footer desktop
+.footer-desktop{
+  width: 100%;
+  height: 10vh;
+  overflow-y: hidden!important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}

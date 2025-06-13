@@ -1,0 +1,111 @@
+<section class="login">
+  <!-- Esta sección del html solo se mostrará en la vista móvil -->
+  <ng-container *ngIf="isMobile(); else isDesktop">
+    <div class="wrapper">
+      <!-- Header de la pantalla del login -->
+      <div class="header mt-3 mb-3">
+        <div class="d-flex flex-direction-row justify-content-center">
+            <img src="/assets/images/logo-marcas.png" class="logo-marca">
+        </div>
+      </div>
+      <!-- Sección del body -->
+      <div class="content mb-3">
+        <div class="d-flex flex-direction-row justify-content-center w-100">
+          <img src="/assets/images/login-img.png" class="login-img">
+        </div>
+        <!-- En esta parte se crea el form para el login -->
+        <div class="login-body">
+          <div class="form-login">
+            <h1 class="title-login">Inicio de sesión</h1>
+            <!-- Correo electrónico -->
+            <mat-form-field class="inputs-login" appearance="outline">
+              <mat-label>Correo Electrónico</mat-label>
+              <input [(ngModel)]="username" type="email" matInput placeholder="Ingresa correo electrónico">
+            </mat-form-field>
+            <div *ngIf="errors.username" class="invalid-feedback">{{ errors.username }}</div>
+
+            <!-- Contraseña -->
+            <mat-form-field class="inputs-login" appearance="outline">
+              <mat-label class="label">Contraseña</mat-label>
+              <input [(ngModel)]="password" type="{{ inputType_1 }}" class="input" matInput placeholder="Ingresa contraseña" (keyup.enter)="login()">
+              <mat-icon matSuffix class="eye-icon" (click)="showPassword()">{{hide_1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </mat-form-field>
+            <div *ngIf="errors.password" class="invalid-feedback">{{ errors.password }}</div>
+
+            <!-- Texto para recuperar contraseña -->
+            <span class="label-pwd" style="cursor: pointer;" (click)="recuperarPwd()">Recupera tu contraseña</span>
+
+            <!-- Botón de iniciar sesión -->
+            <div class="d-flex flex-direction-row justify-content-center w-100 mt-4 mb-4">
+              <button mat-flat-button color="warn" class="btn-login" (click)="login()">
+                  <span class="text-btn">Ingresar</span>
+              </button>
+            </div>
+
+            <!-- Línea -->
+            <hr>
+            <!-- Texto de que si no hay cuenta se registre -->
+            <div class="d-flex flex-direction-row justify-content-center w-100">
+              <span class="txt-registro">¿Aún no tienes una cuenta?<span class="red" (click)="goRegistro()"> Regístrate</span></span>
+            </div>
+          </div>
+        </div>
+      </div><!--Cierre del div-content-->
+      <!-- Aquí va el footer -->
+      <div class="footer-desktop">
+        <img src="/assets/images/liston-img.png" class="liston-img">
+      </div>
+    </div>
+  </ng-container>
+  <!-- Esta sección del html solo se mostrará en la vista web -->
+  <ng-template #isDesktop>
+    <div class="wrapper-desktop">
+      <div class="body-desktop">
+        <!-- Sección izquierda -->
+        <div class="section-left">
+          <div class="d-flex flex-direction-row justify-content-start w-100">
+              <img src="/assets/images/logo-marcas.png" class="logo-marca-desktop">
+          </div>
+          <div class="d-flex flex-direction-row justify-content-start w-100 mt-4">
+              <img src="/assets/images/login-img-lg.png" class="login-img-desktop">
+          </div>
+        </div>
+        <!-- Sección derecha -->
+        <div class="section-right">
+          <div class="form-login-desktop">
+            <h1 class="title-login">Inicio sesión</h1>
+              <!-- Correo electrónico -->
+              <mat-form-field class="inputs-login" appearance="outline">
+                  <mat-label>Correo Electrónico</mat-label>
+                  <input [(ngModel)]="username" type="email" matInput placeholder="Ingresa correo electrónico">
+              </mat-form-field>
+              <div *ngIf="errors.username" class="invalid-feedback">{{ errors.username }}</div>
+              <!-- Contraseña -->
+              <mat-form-field class="inputs-login" appearance="outline">
+                  <mat-label class="label">Contraseña</mat-label>
+                  <input [(ngModel)]="password" type="{{ inputType_1 }}" class="input" matInput placeholder="Ingresa contraseña" (keyup.enter)="login()">
+                  <mat-icon matSuffix class="eye-icon" (click)="showPassword()">{{hide_1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </mat-form-field>
+              <div *ngIf="errors.password" class="invalid-feedback">{{ errors.password }}</div>
+              <!-- Texto de recuperar contraseña -->
+              <span class="label-pwd" style="cursor: pointer;" (click)="recuperarPwd()">Recupera tu contraseña</span>
+              <!-- Botón para iniciar sesión -->
+              <div class="d-flex flex-direction-row justify-content-center w-100 mt-4 mb-4">
+                  <button mat-flat-button color="warn" class="btn-login" (click)="login()">
+                      <span class="text-btn">Ingresar</span>
+                  </button>
+              </div>
+              <hr>
+              <div class="d-flex flex-direction-row justify-content-center w-100">
+                  <span class="txt-registro">¿Aún no tienes una cuenta?<span class="red" (click)="goRegistro()"> Regístrate</span></span>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- Foote desktop -->
+      <div class="footer-desktop">
+        <img src="/assets/images/liston-img.png" class="liston-img">
+      </div>
+    </div>
+  </ng-template>
+</section>

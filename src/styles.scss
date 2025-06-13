@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+//Fuentes principales
+@font-face {
+  font-family: 'Avenir-Bold';
+  src: url('/assets/fonts/AvenirNextLTPro-Bold.eot');
+  src: url('/assets/fonts/AvenirNextLTPro-Bold.eot?#iefix') format('embedded-opentype'),
+      url('/assets/fonts/AvenirNextLTPro-Bold.woff2') format('woff2'),
+      url('/assets/fonts/AvenirNextLTPro-Bold.woff') format('woff'),
+      url('/assets/fonts/AvenirNextLTPro-Bold.ttf') format('truetype'),
+      url('/assets/fonts/AvenirNextLTPro-Bold.svg#AvenirNextLTPro-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/assets/fonts/AvenirNextLTPro-Regular.eot');
+  src: url('/assets/fonts/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),
+      url('/assets/fonts/AvenirNextLTPro-Regular.woff2') format('woff2'),
+      url('/assets/fonts/AvenirNextLTPro-Regular.woff') format('woff'),
+      url('/assets/fonts/AvenirNextLTPro-Regular.ttf') format('truetype'),
+      url('/assets/fonts/AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body { height: 100%; }
+
+body{
+  font-family: Avenir!important;
+}
+
+h1, h2, h3, h4{
+  font-family: Avenir!important;
+}
+
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  //overflow-y: scroll!important;
+}
+
+.invalid-feedback{
+  display: block!important;
+  width: 100%!important;
+  margin-top: -10px!important;
+  margin-bottom: 10px!important;
+  color: #CD0000!important;
+}
