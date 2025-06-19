@@ -1,0 +1,38 @@
+.header-app{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #FFFFFF;
+}
+
+.icon-list{
+  width: 10%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.box-img{
+  width: 80%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-marca{
+  width: 260px;
+  height: 32px;
+}
+
+.icon-menu{
+  color: #CD0000;
+}

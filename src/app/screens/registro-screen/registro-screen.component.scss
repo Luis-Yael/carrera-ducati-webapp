@@ -1,0 +1,296 @@
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: scroll!important;
+}
+
+.header{
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  z-index: 10;
+}
+
+.logo-marca{
+  width: 280px;
+  height: 34px;
+}
+
+.login-img{
+  width: 360px;
+  height: 184px;
+}
+
+.registro-body{
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  //overflow-y: scroll;
+}
+
+.form-registro{
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 55vh;
+}
+
+.title-login{
+  text-align: left;
+  font-family: Avenir-Bold!important;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+.label-pwd{
+  text-align: left;
+  font-family: Avenir-Bold!important;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #CD0000;
+  opacity: 1;
+}
+
+.txt-registro{
+  text-align: center;
+  font-family: Avenir!important;
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+.red{
+  font-family: Avenir-Bold!important;
+  letter-spacing: 0px;
+  color: #CD0000;
+  cursor: pointer;
+}
+
+//Footer
+.footer{
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 10;
+}
+
+.liston-img{
+  width: 56px;
+  height: 28px;
+}
+
+//Button
+.mdc-button{
+  background: #CD0000 0% 0% no-repeat padding-box;
+  opacity: 1;
+  width: 188px;
+  height: 40px;
+  border-radius: 0;
+  //Fuente
+  .text-btn{
+      text-align: center;
+      font-family: Avenir;
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: 0.8px;
+      color: #FFFFFF;
+      opacity: 1;
+  }
+}
+
+//Estilos mat-inputs
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+.mat-mdc-form-field-appearance-outline .mat-form-field-outline {
+  color: #000000;
+  // background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  text-align: left;
+  font-family: Avenir!important;
+  letter-spacing: 0px;
+  color: #000000 !important;
+  opacity: 1;
+}
+
+hr{
+  border-top: 2px solid #8c8b8b;
+  width: 100%;
+}
+mat-label{
+  text-align: left;
+  font-family: Avenir;
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-wrapper {
+  margin: 0 0!important;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: #000000!important;
+}
+
+/* Estilos checkbox */
+.mat-mdc-checkbox-label {
+  margin-top: 5px;
+  text-align: left;
+  font-family: Avenir;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #000000;
+  font-weight: normal !important;
+}
+
+/* Aumenta la especificidad utilizando .mat-checkbox para asegurar que se apliquen los estilos */
+.mat-checkbox .mat-checkbox-inner-container {
+  width: 30px;
+  height: 30px;
+}
+
+/* Cambiar el fondo del checkbox cuando está marcado o en estado indeterminado */
+.mat-checkbox.mat-checkbox-checked.mat-accent .mat-checkbox-background,
+.mat-checkbox.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+/* Cambiar el color de la palomita de checked */
+.mat-checkbox .mat-checkbox-checkmark-path {
+  stroke: #FFFFFF !important;
+}
+
+/* Estilos para las opciones */
+.mat-option {
+  text-align: left;
+  font-family: Avenir;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+/*Todos los estilos para desktop*/
+.wrapper-desktop{
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden!important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-desktop{
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.body-desktop{
+  width: 100vw;
+  height: 90vh;
+  overflow-y: hidden!important;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.section-left{
+  margin-left: 2rem;
+  width: 60%;
+  height: 90vh;
+  overflow-y: hidden!important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-right{
+  padding-top: 12rem;
+  width: 40%;
+  height: 90vh;
+  overflow-y: scroll!important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.form-login-desktop{
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.logo-marca-desktop{
+  width:50%;
+  height: 100%;
+}
+
+.login-img-desktop{
+  width: 100%;
+  height: 100%;
+}
+//Footer desktop
+.footer-desktop{
+  width: 100%;
+  height: 10vh;
+  overflow-y: hidden!important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+//Spinner
+.mat-flat-button.mat-primary.mat-button-disabled, .mat-flat-button.mat-accent.mat-button-disabled, .mat-flat-button.mat-warn.mat-button-disabled, .mat-flat-button.mat-button-disabled.mat-button-disabled, .mat-raised-button.mat-primary.mat-button-disabled, .mat-raised-button.mat-accent.mat-button-disabled, .mat-raised-button.mat-warn.mat-button-disabled, .mat-raised-button.mat-button-disabled.mat-button-disabled, .mat-fab.mat-primary.mat-button-disabled, .mat-fab.mat-accent.mat-button-disabled, .mat-fab.mat-warn.mat-button-disabled, .mat-fab.mat-button-disabled.mat-button-disabled, .mat-mini-fab.mat-primary.mat-button-disabled, .mat-mini-fab.mat-accent.mat-button-disabled, .mat-mini-fab.mat-warn.mat-button-disabled, .mat-mini-fab.mat-button-disabled.mat-button-disabled {
+  background: #CD0000 0% 0% no-repeat padding-box;
+}
+
+.spinner{
+  margin-top: 7px;
+  padding-left: 5px;
+}
+.mat-progress-spinner circle, .mat-spinner circle {
+  stroke: #FFFFFF;
+}

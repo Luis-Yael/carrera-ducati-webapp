@@ -1,0 +1,124 @@
+<section class="home">
+  <div class="wrapper">
+    <!-- Esta etiqueta se usa para indicar todo el html que debe cubrir el menú -->
+    <mat-drawer-container>
+      <mat-drawer #drawer mode='over' position="start">
+        <!-- Inyectamos el componente partial que muestra el menú izquierdo -->
+        <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
+      </mat-drawer>
+      <!-- Se coloca el header de las vistas -->
+      <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+      <!-- Colocamos la sección del body de toda la vista -->
+      <div class="body-home">
+        <!-- Primera sección - imágenes del inicio de la vista -->
+        <div class="section-image">
+          <img src="/assets/images/banner-img.png" class="banner-img">
+          <div class="eslogan mt-3 mb-3">
+              <div class="text-right">
+                  <span class="txt-1">Conoce cómo ganar una</span>
+                  <span class="txt-2">Ducati Scrambler</span>
+              </div>
+              <div class="text-left" (click)="saberMas()">
+                  <span class="txt-red">Saber más</span>
+                  <mat-icon class="icon-arrow">arrow_forward</mat-icon>
+              </div>
+          </div>
+        </div>
+        <!-- 2. Seccion user -->
+        <div class="section-name-user">
+          <span class="txt-3">Hola</span>
+          <span class="txt-user">{{name_user}}</span>
+        </div>
+        <!-- 3. Sección códigos -->
+        <div class="section-codigo">
+          <div class="{{isMobile(1)}}">
+            <div class="registra-codigo">
+              <span class="txt-registro">Registra tu código</span>
+              <!-- Inputs dinámicos -->
+              <form [formGroup]="inputsCodigo" class="mt-3">
+                <div formArrayName="listaInputs">
+                    <div class="input-codigo">
+                        <div *ngFor="let item of getCamposInputs.controls; let i=index" [formGroupName]="i">
+                            <input type="text" formControlName="valor" class="form-control" mask='A' id="input-code-{{i}}" placeholder="0" style="text-transform: uppercase;">
+                        </div>
+                    </div>
+                </div>
+              </form>
+
+              <!-- Select tiendas -->
+              <mat-form-field appearance="outline" class="mt-3">
+                <mat-label>Tienda de compra</mat-label>
+                <mat-select [(ngModel)]="participacion.tienda" name="tiendas" (selectionChange)="changeTienda($event)">
+                    <mat-option *ngFor="let tienda of tiendas" [value]="tienda.value">
+                        {{tienda.nombre}}
+                    </mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <!-- Botón para registrar código -->
+              <div class="d-flex flex-direction-row justify-content-center w-100 mt-3 mb-3">
+                <button mat-flat-button color="warn" class="btn-login" (click)="registrarCodigo()" [disabled]="isLoading">
+                    <span class="text-btn" *ngIf="!isLoading">Registrar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 4. Sección del puntaje -->
+        <div class="section-puntaje">
+          <div class="puntaje">
+              <span class="title-pnt">Puntaje</span>
+              <span class="txt-pnt">Haz acumulado</span>
+              <span class="txt-pnt-red">3600</span>
+              <span class="txt-pnt">puntos</span>
+          </div>
+          <div class="ranking">
+              <span class="title-pnt">Ranking</span>
+              <span class="txt-pnt">Tu posición es</span>
+              <span class="txt-pnt-red">14</span>
+              <br>
+          </div>
+        </div>
+        <!-- 5. Sección de códigos registrados -->
+        <div class="codigos-registrados">
+          <div class="{{isMobile(2)}}">
+              <h3 class="title-codigos">Códigos registrados</h3>
+              <table class="table table-responsive" *ngIf="lista_codigos.length > 0; else sinCodigos">
+                  <thead class="head-table">
+                    <tr>
+                      <th scope="col" *ngIf="tiene_juegos_pendientes">Jugar</th>
+                      <th scope="col">Fecha</th>
+                      <th scope="col">Código</th>
+                      <th scope="col">Puntos totales</th>
+                      <th scope="col" style="min-width: 100px;">Puntos por código</th>
+                      <th scope="col" style="min-width: 100px;">Puntos por jugar</th>
+                      <th scope="col" style="min-width: 20px; border-bottom: 0px;"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="tr-table" *ngFor="let codigo of lista_codigos; let i=index">
+                      <td *ngIf="tiene_juegos_pendientes" style="text-align: center;">
+                          <mat-icon class="icon-play" *ngIf="codigo.participaciones < 2" style="cursor: pointer;" (click)="jugarParticipacion(codigo)">play_circle_outline</mat-icon>
+                      </td>
+                      <td style="min-width: 100px; text-align: center;">{{codigo.creation | date: 'dd-MM-yyyy'}}</td>
+                      <td style="text-align: center;">{{codigo.codigo}}</td>
+                      <td style="text-align: center;">{{codigo.puntos_totales}}</td>
+                      <td style="min-width: 100px; text-align: center;">{{codigo.puntos_codigo}}</td>
+                      <td style="min-width: 100px; text-align: center;">{{codigo.puntos_jugar}}</td>
+                      <td style="min-width: 20px; text-align: center; border-bottom: 0px;"></td>
+                    </tr>
+                  </tbody>
+              </table>
+              <ng-template #sinCodigos>
+                  <span class="txt-pnt">No se tienen códigos registrados</span>
+              </ng-template>
+          </div>
+        </div>
+        <!-- 6. Footer -->
+        <div class="footer">
+          <app-footer-app></app-footer-app>
+        </div>
+      </div>
+    </mat-drawer-container>
+  </div>
+</section>
