@@ -1,0 +1,56 @@
+<section class="bases-promocion">
+  <div class="wrapper">
+    <!-- Esta etiqueta se usa para indicar todo el html que debe cubrir el menú -->
+    <mat-drawer-container>
+      <mat-drawer #drawer mode='over' position="start">
+        <!-- Inyectamos el componente partial que muestra el menú izquierdo -->
+        <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
+      </mat-drawer>
+      <!-- Se coloca el header de las vistas -->
+      <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+      <!-- Sección del body donde se muestra todo el contenido -->
+      <div class="body-home">
+        <!-- Sección de la imagen inicial y el eslogan -->
+        <div class="section-image">
+          <img src="/assets/images/header-img.png" class="header-img">
+          <div class="line-red-horizontal">
+            <span class="text-ducati">Ducati Motor Holding S.p.A. Official Licensed Product</span>
+          </div>
+          <div class="eslogan {{isMobile()}}">
+              <div class="line-color">
+                  <div class="vertical-line" style="height: 111px;"></div>
+              </div>
+              <div class="title-link">
+                  <span>Bases de la promoción</span>
+              </div>
+          </div>
+        </div>
+        <!-- Sección de imagenes numeradas-->
+        <div class="section-bases">
+          <div class="num-bases">
+            <img src="/assets/images/1-compra-titulo.png" class="compra-1">
+            <div class="text-and-image">
+                <span class="txt-normal">productos participantes</span>
+                <img src="/assets/images/logo-marcas.png" class="logo-mini">
+            </div>
+            <span class="txt-bold mt-1">en Liverpool/Devlyn</span>
+          </div>
+
+          <div class="num-bases">
+            <img src="/assets/images/2-registra-titulo.png" class="compra-2">
+            <span class="txt-normal">todos tus códigos en el sitio</span>
+            <span class="txt-bold">www.acelerayganaconcarrera.com.mx</span>
+          </div>
+
+          <!-- TODO:Colocar el contenido faltante de bases de la promocion -->
+
+        </div>
+
+        <!-- 6. Footer -->
+        <div class="footer">
+          <app-footer-app></app-footer-app>
+        </div>
+      </div>
+    </mat-drawer-container>
+  </div>
+</section>
