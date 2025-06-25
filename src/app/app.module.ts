@@ -25,6 +25,8 @@ import { HeaderAppComponent } from './partials/header-app/header-app.component';
 import { LeftSidebarComponent } from './partials/left-sidebar/left-sidebar.component';
 import { FooterAppComponent } from './partials/footer-app/footer-app.component';
 import { BasesPromocionScreenComponent } from './screens/bases-promocion-screen/bases-promocion-screen.component';
+import { InstruccionesScreenComponent } from './screens/instrucciones-screen/instrucciones-screen.component';
+import { NuevoLookScreenComponent } from './screens/nuevo-look-screen/nuevo-look-screen.component';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { BasesPromocionScreenComponent } from './screens/bases-promocion-screen/
     HeaderAppComponent,
     LeftSidebarComponent,
     FooterAppComponent,
-    BasesPromocionScreenComponent
+    BasesPromocionScreenComponent,
+    InstruccionesScreenComponent,
+    NuevoLookScreenComponent
   ],
   imports: [
     BrowserModule,

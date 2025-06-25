@@ -1,0 +1,71 @@
+<section class="instrucciones">
+  <div class="wrapper">
+    <mat-drawer-container>
+      <mat-drawer #drawer mode='over' position="start">
+        <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
+      </mat-drawer>
+      <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+      <!-- Sección del body donde se muestra todo el contenido -->
+      <div class="body-instrucciones">
+        <!-- Sección del eslogan (título)-->
+        <div class="section-title">
+          <div class="eslogan {{isMobile()}}">
+              <div class="line-color">
+                  <div class="vertical-line" style="height: 111px;"></div>
+              </div>
+              <div class="title-link">
+                  <span>¡HORA DE CORRER!</span>
+              </div>
+          </div>
+        </div>
+        <!-- Sección donde se muestra el objetivo -->
+        <div class="section-obj">
+          <h3 class="objetivo">Objetivo</h3>
+          <p class="txt-objetivo">Estás a punto de jugar Moto Rider, el juego consiste en conducir una motocicleta a través de un camino con autos, tu misión es esquivarlos durante 120 segundos mientras la velocidad va aumentando.</p>
+        </div>
+        <!-- Aquí va la tabla de puntuación -->
+        <div class="puntuacion">
+          <table class="table table-responsive" *ngIf="lista_puntuacion.length > 0; else sinPuntuacion">
+            <thead class="head-table">
+              <tr>
+                <th scope="col" style="text-transform: uppercase;">Acción</th>
+                <th scope="col" style="text-transform: uppercase;">Puntos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="tr-table" *ngFor="let accion of lista_puntuacion; let i=index">
+                <td style="text-align: left;">{{accion.descripcion}}</td>
+                <td style="text-align: center;">{{accion.puntos}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <ng-template #sinPuntuacion>
+              <span class="txt-pnt">No se tienen puntuaciones registradas</span>
+          </ng-template>
+        </div>
+
+        <!-- Sección información adicional -->
+        <div class="section-info-adicional">
+          <!-- Aquí va el título -->
+          <h3 class="title">Información adicional</h3>
+          <p class="txt-info">
+            Tienes dos oportunidades por cada código que redimimas.
+            <br><br>La 1ra oportunidad es entrenamiento y no genera puntos.
+            <br><br>La 2da oportunidad genera puntos, el juego termina si chocas o se termina el tiempo.
+            <br><br>Verifica que tu conexión a Internet sea estable al momento de jugar.
+          </p>
+          <!-- Botón para registrar código -->
+          <div class="d-flex flex-direction-row justify-content-center w-100 mt-3 mb-3">
+            <button mat-flat-button color="warn" class="btn-login" (click)="jugarAhora()" [disabled]="isLoading">
+                <span class="text-btn" *ngIf="!isLoading">Jugar ahora</span>
+            </button>
+          </div>
+        </div>
+        <!-- 6. Footer -->
+        <div class="footer">
+          <app-footer-app></app-footer-app>
+        </div>
+      </div>
+    </mat-drawer-container>
+  </div>
+</section>

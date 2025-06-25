@@ -1,0 +1,57 @@
+<section class="nuevo-look">
+  <div class="wrapper">
+    <mat-drawer-container>
+      <!-- Menú lateral izquierdo -->
+      <mat-drawer #drawer mode='over' position="start">
+        <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
+      </mat-drawer>
+      <!-- Cabecera con el logo -->
+      <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+      <!-- Sección del body donde se muestra todo el contenido -->
+      <div class="body-look">
+        <!-- Sección del eslogan -->
+        <div class="section-title">
+          <div class="eslogan {{isMobile()}}">
+              <div class="line-color">
+                  <div class="vertical-line" style="height: 111px;"></div>
+              </div>
+              <div class="title-link">
+                  <span style="text-transform: uppercase;">Nuevo look</span>
+              </div>
+          </div>
+          <span class="txt-inicio">¿Quieres tener una idea de cómo verías si usarás unos increíbles Carrera Ducati?</span>
+        </div>
+
+        <!-- Sección de las imágenes para lentes -->
+        <div class="section-lentes">
+          <div class="img-lente-txt">
+            <img src="assets/images/lentes-ducati-1.png" class="img-lente">
+            <span class="txt-image">CARDUC 001/S</span>
+          </div>
+          <div class="img-lente-txt">
+            <img src="assets/images/lentes-ducati-2.png" class="img-lente">
+            <span class="txt-image">CARDUC 002/S</span>
+          </div>
+          <div class="img-lente-txt">
+            <img src="assets/images/lentes-ducati-3.png" class="img-lente">
+            <span class="txt-image">CARDUC 003/S</span>
+          </div>
+        </div>
+
+         <!-- Sección para los dos botones -->
+        <div class="d-flex flex-direction-row justify-content-between w-100 mt-3 mb-3" style="padding-left: 1.2rem; padding-right: 1.2rem;">
+          <button mat-flat-button class="omitir" (click)="omitir()" [disabled]="isLoading">
+              <span class="text-btn-basic" *ngIf="!isLoading">Omitir</span>
+          </button>
+          <button mat-flat-button color="warn" class="usar-lentes" (click)="usarLentes()" [disabled]="isLoading">
+              <span class="text-btn" *ngIf="!isLoading">Jugar ahora</span>
+          </button>
+        </div>
+        <!-- 6. Footer -->
+        <div class="footer">
+          <app-footer-app pantalla="nuevo-look"></app-footer-app>
+        </div>
+      </div>
+    </mat-drawer-container>
+  </div>
+</section>
